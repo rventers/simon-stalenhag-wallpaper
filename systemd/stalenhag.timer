@@ -5,7 +5,7 @@ After=NetworkManager-wait-online.service
 [Timer]
 Persistent=true
 OnBootSec=2min
-OnUnitActiveSec=1h
+OnUnitActiveSec=24h
 Unit=stalenhag.service
 
 [Install]
