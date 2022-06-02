@@ -3,9 +3,8 @@ Description=Pull the newest image from Simon Stålenhag
 After=NetworkManager-wait-online.service
 
 [Timer]
+OnCalendar=daily
 Persistent=true
-OnBootSec=2min
-OnUnitActiveSec=1d
 Unit=stalenhag.service
 
 [Install]
