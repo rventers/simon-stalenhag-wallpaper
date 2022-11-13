@@ -31,8 +31,8 @@ class Collections(Enum):
 
 PLATFORM = sys.platform
 IMAGES_DIR = os.path.expanduser('~|Pictures|Stålenhag|'.replace('|', os.sep))
-CONFIG_DIR = os.path.expanduser('~|.stalenhag|'.replace('|', os.sep))
-CONFIG_FILE = os.path.expanduser('~|.stalenhag|config.json'.replace('|', os.sep))
+CONFIG_DIR = os.path.expanduser('~|.config|stalenhag|'.replace('|', os.sep))
+CONFIG_FILE = os.path.expanduser('~|.config|stalenhag|config.json'.replace('|', os.sep))
 if 'win' not in PLATFORM:
     DESKTOP = os.environ["DESKTOP_SESSION"]
     import dbus
