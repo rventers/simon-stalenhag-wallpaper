@@ -1,12 +1,13 @@
 # Simon Stålenhag wallpaper scraper
 
-I made this script for downloading Simon Stålenhag wallpaper from his website (www.simonstalenhag.se/) and store them locally and apply them as my wallpaper on my Gnome desktop.
+This script was made to download Simon Stålenhag wallpapers from his website (www.simonstalenhag.se) and store them locally and apply them as the wallpaper on the Gnome desktop.
 
-Personally i combined this script with a systemd timer so the wallpaper is changed every hour.
+The script has been combined with a systemd timer to rotate the wallpaper each day.
+
 ## Requirements
 
 - python3
-- Gnome3 desktop or KDE Plasma 5
+- Gnome3 desktop
 
 ## From this fork
 

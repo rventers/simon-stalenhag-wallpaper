@@ -6,7 +6,7 @@ After=NetworkManager-wait-online.service
 Type=oneshot
 Environment=DISPLAY=:0
 ExecStartPre=/bin/sleep 10
-ExecStart=/usr/local/bin/stalenhag
+ExecStart=%h/.local/bin/stalenhag
 
 [Install]
 WantedBy=basic.target
