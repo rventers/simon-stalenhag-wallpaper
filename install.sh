@@ -9,7 +9,7 @@ BIN_DIR=$HOME/.local/bin
 if [[ "$PATH" =~ "$BIN_DIR" ]]; then
     echo "Installing Stålenhag Wallpaper service"
     cp stalenhag.py $BIN_DIR/stalenhag
-    sudo cp -p systemd/* /etc/systemd/user
+    cp -p systemd/* $HOME/.config/systemd/user
     systemctl enable --user stalenhag.service stalenhag.timer
     systemctl start --user stalenhag.service stalenhag.timer
 else
