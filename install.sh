@@ -1,6 +1,7 @@
 #! /bin/sh
 
 BIN_DIR=$HOME/.local/bin
+SYSD_DIR=$HOME/.config/systemd/user
 
 # Create BIN_DIR if missing.
 [ -d $BIN_DIR ] || mkdir $BIN_DIR
@@ -8,6 +9,7 @@ BIN_DIR=$HOME/.local/bin
 # Install the service if $BIN_DIR is found in $PATH.
 if [[ "$PATH" =~ "$BIN_DIR" ]]; then
     echo "Installing Stålenhag Wallpaper service"
+    [[ -d $SYSD_DIR ]] || mkdir -p $SYSD_DIR
     cp stalenhag.py $BIN_DIR/stalenhag
     cp -p systemd/* $HOME/.config/systemd/user
     systemctl enable --user stalenhag.service stalenhag.timer
