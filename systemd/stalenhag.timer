@@ -1,11 +1,10 @@
 [Unit]
 Description=Pull the newest image from Simon Stålenhag
-After=NetworkManager-wait-online.service
+After=network-online.target
 
 [Timer]
 OnCalendar=daily
 Persistent=true
-Unit=stalenhag.service
 
 [Install]
-WantedBy=stalenhag.service
+WantedBy=timers.target

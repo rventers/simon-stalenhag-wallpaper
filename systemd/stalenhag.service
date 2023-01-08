@@ -1,6 +1,6 @@
 [Unit]
 Description=Pull the newest image from Simon Stålenhag
-After=NetworkManager-wait-online.service
+After=network-online.target
 
 [Service]
 Type=oneshot
@@ -9,4 +9,4 @@ ExecStartPre=/bin/sleep 10
 ExecStart=%h/.local/bin/stalenhag
 
 [Install]
-WantedBy=basic.target
+WantedBy=multi-user.target
